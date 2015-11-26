@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Markdown</title>
+<link rel="stylesheet" href="/assets/css/md-gfm.css">
+<link rel="stylesheet" href="/assets/css/sprint-hl.css">
+<link rel="stylesheet" href="/assets/css/sprint-md.css">
+</head>
+<body>
+<div class="markdown-format container">
+<h1><a name="gulp-mdvars" class="anchor" href="#gulp-mdvars"><span class="octicon octicon-link"></span>Gulp-mdvars</a></h1><blockquote>
+<p>Parse VarStream metadatas in a markdown file and reemit the cleaned up
+ markdown content with <a href="http://gulpjs.com/">Gulp</a>.</p>
+</blockquote>
+<h3><a name="blockquotes" class="anchor" href="#blockquotes"><span class="octicon octicon-link"></span>Blockquotes</a></h3><h5><a name="normal" class="anchor" href="#normal"><span class="octicon octicon-link"></span>normal</a></h5><blockquote>
+<p>Normal Blockquote</p>
+</blockquote>
+<h5><a name="italic" class="anchor" href="#italic"><span class="octicon octicon-link"></span>italic</a></h5><blockquote>
+<p><em>Normal Blockquote - italic</em></p>
+</blockquote>
+<h5><a name="bold" class="anchor" href="#bold"><span class="octicon octicon-link"></span>bold</a></h5><blockquote>
+<p><strong>Normal Blockquote - bold</strong></p>
+</blockquote>
+<p>-&gt; This is centered Text &lt;-</p>
+<h1><a name="heading-1" class="anchor" href="#heading-1"><span class="octicon octicon-link"></span>Heading 1</a></h1><h2><a name="heading-2" class="anchor" href="#heading-2"><span class="octicon octicon-link"></span>Heading 2</a></h2><h3><a name="heading-3" class="anchor" href="#heading-3"><span class="octicon octicon-link"></span>Heading 3</a></h3><h4><a name="heading-4" class="anchor" href="#heading-4"><span class="octicon octicon-link"></span>Heading 4</a></h4><h5><a name="heading-5" class="anchor" href="#heading-5"><span class="octicon octicon-link"></span>Heading 5</a></h5><h6><a name="heading-6" class="anchor" href="#heading-6"><span class="octicon octicon-link"></span>Heading 6</a></h6><h1><a name="heading-1" class="anchor" href="#heading-1"><span class="octicon octicon-link"></span>Heading 1</a></h1><h2><a name="heading-1" class="anchor" href="#heading-1"><span class="octicon octicon-link"></span>Heading 1</a></h2><p>hr</p>
+<hr>
+<h2><a name="hr-2" class="anchor" href="#hr-2"><span class="octicon octicon-link"></span>hr 2</a></h2><p>hr 3</p>
+<hr>
+<p><a href="https://npmjs.org/package/gulp-mdvars"><img src="https://badge.fury.io/js/gulp-mdvars.svg" alt="NPM version"></a> <a href="https://travis-ci.org/nfroidure/gulp-mdvars"><img src="https://secure.travis-ci.org/nfroidure/gulp-mdvars.svg" alt="Build status"></a> <a href="https://david-dm.org/nfroidure/gulp-mdvars"><img src="https://david-dm.org/nfroidure/gulp-mdvars.svg" alt="Dependency Status"></a> <a href="https://david-dm.org/nfroidure/gulp-mdvars#info=devDependencies"><img src="https://david-dm.org/nfroidure/gulp-mdvars/dev-status.svg" alt="devDependency Status"></a> <a href="https://coveralls.io/r/nfroidure/gulp-mdvars?branch=master"><img src="https://coveralls.io/repos/nfroidure/gulp-mdvars/badge.svg?branch=master" alt="Coverage Status"></a></p>
+<h2><a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span>Usage</a></h2><pre><code class="lang-html"><span class="sprint-tag">&lt;<span class="sprint-title">div</span> <span class="sprint-attribute">class</span>=<span class="sprint-value">"hello"</span>&gt;</span>
+    hello
+<span class="sprint-tag">&lt;/<span class="sprint-title">div</span>&gt;</span>
+</code></pre>
+<h2><a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span>Usage</a></h2><pre><code class="lang-ruby">var test = <span class="sprint-string">"string"</span>;
+<span class="sprint-keyword">require</span> <span class="sprint-string">'github/markup'</span>
+<span class="sprint-constant">GitHub::Markup</span>.render(<span class="sprint-string">'README.markdown'</span>, <span class="sprint-string">"* One\n* Two"</span>)
+</code></pre>
+<p>First, install <code>gulp-mdvars</code> as a development dependency:</p>
+<pre><code class="lang-bash">npm install --save-dev gulp-mdvars
+</code></pre>
+<p>Then, add it to your <code>gulpfile.js</code>:</p>
+<pre><code class="lang-javascript"><span class="sprint-keyword">var</span> mdvars = <span class="sprint-built_in">require</span>(<span class="sprint-string">'gulp-mdvars'</span>);
+<span class="sprint-keyword">var</span> marked = <span class="sprint-built_in">require</span>(<span class="sprint-string">'gulp-marked'</span>);
+
+gulp.task(<span class="sprint-string">'mdvars'</span>, <span class="sprint-function"><span class="sprint-keyword">function</span>(<span class="sprint-params"></span>) </span>{
+  gulp.src([<span class="sprint-string">'assets/contents/*.md'</span>])
+    .pipe(mdvars({
+      prop: <span class="sprint-string">'metadata'</span>, <span class="sprint-comment">// Datas will be set to the file object in the given property</span>
+     }))
+    .pipe(marked()) <span class="sprint-comment">// Do whatever you want with the cleaned up datas</span>
+    .pipe(gulp.dest(<span class="sprint-string">'www/'</span>));
+});
+</code></pre>
+<pre><code class="lang-js"><span class="sprint-keyword">var</span> test2 = <span class="sprint-string">"require"</span>;
+</code></pre>
+<p><code>gulp-mdvars</code> is build on top of <a href="https://github.com/nfroidure/mdvars">mdvars</a>
+ and <a href="https://github.com/nfroidure/VarStream">varstream</a> NPM modules. Please
+ report specific issues in the corresponding repository.</p>
+<h2><a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span>API</a></h2><h3><a name="mdvars-options-" class="anchor" href="#mdvars-options-"><span class="octicon octicon-link"></span>mdvars(options)</a></h3><h4><a name="options-prop" class="anchor" href="#options-prop"><span class="octicon octicon-link"></span>options.prop</a></h4><p>Type: <code>String</code>
+Default value: <code>&#39;metadata&#39;</code></p>
+<p>A string value indicating in wich property metadatas must be filled.</p>
+<h2><a name="stats" class="anchor" href="#stats"><span class="octicon octicon-link"></span>Stats</a></h2><p><a href="https://nodei.co/npm/gulp-mdvars/"><img src="https://nodei.co/npm/gulp-mdvars.png?downloads=true&amp;stars=true" alt="NPM"></a>
+<a href="https://nodei.co/npm/gulp-mdvars/"><img src="https://nodei.co/npm-dl/gulp-mdvars.png" alt="NPM"></a></p>
+
+</div>
+</body>
+</html>

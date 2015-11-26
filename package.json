@@ -1,0 +1,32 @@
+{
+  "name": "md-to-html-conversion",
+  "description": "Convert .md files into .html",
+  "version": "0.0.1",
+  "author": {
+    "name": "Aakash Goel"
+  },
+  "dependencies": {
+    "gulp-marked": "^1.0.0",
+    "highlight.js": "~8.8.0",
+    "marked": "~0.3.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "compression": "^1.4.1",
+    "del": "^2.1.0",
+    "express": "^4.12.0",
+    "gulp": "^3.9.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-buffer": "0.0.2",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-util": "^3.0.5",
+    "gulp-watch": "^4.3.5",
+    "merge-stream": "^0.1.7",
+    "run-sequence": "^1.1.5",
+    "serve-index": "^1.6.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

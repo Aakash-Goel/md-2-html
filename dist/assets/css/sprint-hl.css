@@ -1,0 +1,149 @@
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #f0f0f0;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs,
+.sprint-subst,
+.sprint-tag .sprint-title,
+.nginx .sprint-title {
+  color: black;
+}
+
+.sprint-string,
+.sprint-title,
+.sprint-constant,
+.sprint-parent,
+.sprint-tag .sprint-value,
+.sprint-rule .sprint-value,
+.sprint-preprocessor,
+.sprint-pragma,
+.sprint-name,
+.haml .sprint-symbol,
+.ruby .sprint-symbol,
+.ruby .sprint-symbol .sprint-string,
+.sprint-template_tag,
+.django .sprint-variable,
+.smalltalk .sprint-class,
+.sprint-addition,
+.sprint-flow,
+.sprint-stream,
+.bash .sprint-variable,
+.pf .sprint-variable,
+.apache .sprint-tag,
+.apache .sprint-cbracket,
+.tex .sprint-command,
+.tex .sprint-special,
+.erlang_repl .sprint-function_or_atom,
+.asciidoc .sprint-header,
+.markdown .sprint-header,
+.coffeescript .sprint-attribute,
+.tp .sprint-variable {
+  color: #800;
+}
+
+.smartquote,
+.sprint-comment,
+.sprint-annotation,
+.diff .sprint-header,
+.sprint-chunk,
+.asciidoc .sprint-blockquote,
+.markdown .sprint-blockquote {
+  color: #888;
+}
+
+.sprint-number,
+.sprint-date,
+.sprint-regexp,
+.sprint-literal,
+.sprint-hexcolor,
+.smalltalk .sprint-symbol,
+.smalltalk .sprint-char,
+.go .sprint-constant,
+.sprint-change,
+.lasso .sprint-variable,
+.makefile .sprint-variable,
+.asciidoc .sprint-bullet,
+.markdown .sprint-bullet,
+.asciidoc .sprint-link_url,
+.markdown .sprint-link_url {
+  color: #080;
+}
+
+.sprint-label,
+.ruby .sprint-string,
+.sprint-decorator,
+.sprint-filter .sprint-argument,
+.sprint-localvars,
+.sprint-array,
+.sprint-attr_selector,
+.sprint-important,
+.sprint-pseudo,
+.sprint-pi,
+.haml .sprint-bullet,
+.sprint-doctype,
+.sprint-deletion,
+.sprint-envvar,
+.sprint-shebang,
+.apache .sprint-sqbracket,
+.nginx .sprint-built_in,
+.tex .sprint-formula,
+.erlang_repl .sprint-reserved,
+.sprint-prompt,
+.asciidoc .sprint-link_label,
+.markdown .sprint-link_label,
+.vhdl .sprint-attribute,
+.clojure .sprint-attribute,
+.asciidoc .sprint-attribute,
+.lasso .sprint-attribute,
+.coffeescript .sprint-property,
+.sprint-phony {
+  color: #88f;
+}
+
+.sprint-keyword,
+.sprint-id,
+.sprint-title,
+.sprint-built_in,
+.css .sprint-tag,
+.sprint-doctag,
+.smalltalk .sprint-class,
+.sprint-winutils,
+.bash .sprint-variable,
+.pf .sprint-variable,
+.apache .sprint-tag,
+.sprint-type,
+.sprint-typename,
+.tex .sprint-command,
+.asciidoc .sprint-strong,
+.markdown .sprint-strong,
+.sprint-request,
+.sprint-status,
+.tp .sprint-data,
+.tp .sprint-io {
+  font-weight: bold;
+}
+
+.asciidoc .sprint-emphasis,
+.markdown .sprint-emphasis,
+.tp .sprint-units {
+  font-style: italic;
+}
+
+.nginx .sprint-built_in {
+  font-weight: normal;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.lasso .markup,
+.tex .sprint-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .sprint-cdata {
+  opacity: 0.5;
+}

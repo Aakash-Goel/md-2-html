@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Markdown</title>
+<link rel="stylesheet" href="/assets/css/md-gfm.css">
+<link rel="stylesheet" href="/assets/css/sprint-hl.css">
+<link rel="stylesheet" href="/assets/css/sprint-md.css">
+</head>
+<body>
+<div class="markdown-format container">
+<h3><a name="available-gulp-commands" class="anchor" href="#available-gulp-commands"><span class="octicon octicon-link"></span>Available GULP commands</a></h3><ol>
+<li><p>for <strong>DEV (development)</strong> :-</p>
+<ul>
+<li><code>gulp</code></li>
+<li><code>gulp --buildEnv=dev</code></li>
+<li><code>gulp compile --buildEnv=dev</code></li>
+</ul>
+</li>
+<li><p>for <strong>PROD (production)</strong> :-</p>
+<ul>
+<li><code>gulp --buildEnv=prod</code></li>
+<li><code>gulp compile --buildEnv=prod</code></li>
+</ul>
+</li>
+<li><p>for <strong>multiple builds</strong>, for different environments</p>
+<ul>
+<li><p>‘gulp compile –buildEnv=[<em>env_id_1</em>,<em>env_id_2</em>,<em>env_id_3</em>,etc..]’</p>
+<blockquote>
+<p>Find below the available <em>env_id’s</em> we are using as of now. Should be comma seperated, if you are compiling it for multiple environments at once.</p>
+<p>Available [<em>env_id’s</em>]</p>
+<ul>
+<li>dev,prod,staging,ort,rtb1,rtb2,st1,st2,st3,st4,st5,st6,dev1,dev2,dev3,dev4,dev5,dev6</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code class="lang-bash"><span class="sprint-comment">## Examples :-</span>
+    - `gulp compile --buildEnv=prod` (will generate <span class="sprint-string">'dist_prod'</span> folder)
+    - `gulp compile --buildEnv=staging` (will generate <span class="sprint-string">'dist_staging'</span> folder)
+    - `gulp compile --buildEnv=prod,staging` (will generate <span class="sprint-string">'dist_prod'</span> and <span class="sprint-string">'dist_staging'</span> folder)
+    - `gulp compile --buildEnv=prod,ort,rtb1,st3` (will generate <span class="sprint-string">'dist_prod'</span>,<span class="sprint-string">'dist_ort'</span>,<span class="sprint-string">'dist_rtb1'</span>,<span class="sprint-string">'dist_st3'</span> folder)
+    - `gulp compile --buildEnv=prod,ort,rtb1,st3,dev6` (will generate <span class="sprint-string">'dist_prod'</span>,<span class="sprint-string">'dist_ort'</span>,<span class="sprint-string">'dist_rtb1'</span>,<span class="sprint-string">'dist_st3'</span>,<span class="sprint-string">'dist_dev6'</span> folder)
+</code></pre>
+<pre><code class="lang-ruby"><span class="sprint-comment">## NOTE :- </span>
+please note that, <span class="sprint-string">"compile"</span> task will only compile your source files into destination folder, but will <span class="sprint-keyword">not</span> serve the application to the browser.
+<span class="sprint-constant">This</span> task, generally helps you <span class="sprint-keyword">when</span> you wanted to compile/build your application <span class="sprint-keyword">for</span> different environment like <span class="sprint-string">'prod'</span>, <span class="sprint-string">'staging'</span>, <span class="sprint-string">'ort'</span>, <span class="sprint-string">'rtb1'</span>, etc......
+</code></pre>
+<ul>
+<li>Item 1<ol>
+<li>A corollary to the above item.</li>
+<li>Yet another point to consider.</li>
+</ol>
+</li>
+<li>Item 2<ul>
+<li>A corollary that does not need to be ordered.<ul>
+<li>This is indented four spaces, because it’s two spaces further than the item above.</li>
+<li>You might want to consider making a new list.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Item 3</li>
+</ul>
+<p><del>Examples</del>
+//————————————- Gulp Command Ends ————————————-//</p>
+<ol>
+<li>Item 1<ol>
+<li>A corollary to the above item.</li>
+<li>Yet another point to consider.</li>
+</ol>
+</li>
+<li>Item 2<ul>
+<li>A corollary that does not need to be ordered.<ul>
+<li>This is indented four spaces, because it’s two spaces further than the item above.</li>
+<li>You might want to consider making a new list.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Item 3</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>Item 1</code></p>
+</li>
+<li><p><code>Item 2</code></p>
+</li>
+<li><p><code>Item 3</code></p>
+</li>
+</ul>
+<h3><a name="naming-conventions" class="anchor" href="#naming-conventions"><span class="octicon octicon-link"></span>Naming Conventions</a></h3><ul>
+<li><p>Item 1</p>
+</li>
+<li><p>Item 2</p>
+</li>
+<li><p>Item 3</p>
+</li>
+</ul>
+<p>Team, please follow the proper naming conventions. It is very important for consistency.</p>
+<p><strong> For AngularJS and JS </strong></p>
+<ul>
+<li><p>Svn path of the doc:- (<a href="http://dvmk9764.dev.sprint.com:18080/svn/sitedev/trunk/sprint_3.0_dev/docs/code_walkthrough/">http://dvmk9764.dev.sprint.com:18080/svn/sitedev/trunk/sprint_3.0_dev/docs/code_walkthrough/</a>)</p>
+</li>
+<li><p>AngularJS Styleguide:- (<a href="https://github.com/johnpapa/angular-styleguide">https://github.com/johnpapa/angular-styleguide</a>)</p>
+</li>
+</ul>
+<p><strong> For CSS </strong></p>
+<ul>
+<li>(<a href="https://en.bem.info/method/naming-convention/">https://en.bem.info/method/naming-convention/</a>)</li>
+<li>(<a href="https://css-tricks.com/bem-101/">https://css-tricks.com/bem-101/</a>)</li>
+<li>(<a href="http://getbem.com/introduction/">http://getbem.com/introduction/</a>)</li>
+</ul>
+<pre><code>Also, please try to write modular javascript and css. 
+Means, Break your code into multiple files which clearly identifies the feature and type. Name your files properly.
+</code></pre>
+</div>
+</body>
+</html>
