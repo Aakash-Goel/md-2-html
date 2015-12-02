@@ -1,9 +1,10 @@
 {
-  "name": "md-to-html-conversion",
+  "name": "md-2-html",
   "description": "Convert .md files into .html",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
-    "name": "Aakash Goel"
+    "name": "Aakash Goel",
+    "email": "se.aakashgoel@gmail.com"
   },
   "dependencies": {
     "gulp-marked": "^1.0.0",
@@ -28,5 +29,6 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  }
+  },
+  "license": "MIT"
 }
