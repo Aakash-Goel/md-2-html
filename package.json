@@ -1,7 +1,7 @@
 {
   "name": "md-2-html",
   "description": "Convert .md files into .html",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
     "name": "Aakash Goel",
     "email": "se.aakashgoel@gmail.com"
